@@ -27,7 +27,7 @@ export default function TodoList({ filter }: { filter: string }) {
   const filteredList = getTodoStatus(todos, filter);
 
   return (
-    <section>
+    <section className="w-full">
       <ul>
         {filteredList.map((todo) => (
           <Todo

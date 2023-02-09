@@ -8,10 +8,10 @@ function App() {
   const [filter, setFilter] = useState<string>(filters[0]);
 
   return (
-    <>
-      <Header filters={filters} onChangeFilter={setFilter} />
+    <main className="  flex h-full w-full flex-col items-center justify-between text-center">
+      <Header filter={filter} filters={filters} onChangeFilter={setFilter} />
       <TodoList filter={filter} />
-    </>
+    </main>
   );
 }
 
