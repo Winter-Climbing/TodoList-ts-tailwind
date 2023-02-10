@@ -43,12 +43,12 @@ export default function TodoList({ filter }: { filter: string }) {
   );
 }
 
-const readFromLocalStorageTodo = () => {
+export const readFromLocalStorageTodo = () => {
   const todo = localStorage.getItem("todos");
   return todo ? JSON.parse(todo) : null;
 };
 
-const getTodoStatus = (todos: todoList[], filter: string) => {
+export const getTodoStatus = (todos: todoList[], filter: string) => {
   if (filter === "all") return todos;
   return todos.filter((todo) => todo.status === filter);
 };
