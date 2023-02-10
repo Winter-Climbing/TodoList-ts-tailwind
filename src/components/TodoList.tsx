@@ -27,8 +27,8 @@ export default function TodoList({ filter }: { filter: string }) {
   const filteredList = getTodoStatus(todos, filter);
 
   return (
-    <section className="w-full">
-      <ul>
+    <section className="flex h-full min-h-0 w-full flex-col justify-between ">
+      <ul className="flex flex-col overflow-y-auto">
         {filteredList.map((todo) => (
           <Todo
             key={todo.id}
@@ -37,8 +37,8 @@ export default function TodoList({ filter }: { filter: string }) {
             onDelete={handleDeleteTodo}
           />
         ))}
-        <AddTodo onAdd={handleAddTodo} />
       </ul>
+      <AddTodo onAdd={handleAddTodo} />
     </section>
   );
 }

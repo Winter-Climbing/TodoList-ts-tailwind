@@ -26,15 +26,17 @@ const AddTodo = ({ onAdd }: { onAdd(todo: todoList): void }) => {
       onSubmit={handleSubmitTodo}
     >
       <input
-        className="flex-1 rounded-b-lg rounded-t-lg border-none px-3 py-4 text-2xl outline-none"
+        className="peer flex-1 rounded-b-lg rounded-t-lg border-none px-3 py-4 text-2xl outline-none"
         type="text"
         value={value}
         onChange={handleChangeTodo}
         ref={inputRef}
         placeholder="입력하세요"
+        required
       />
+
       <button
-        className="cursor-pointer rounded-r-lg  bg-blue-500 py-3 px-8 text-2xl font-bold text-white"
+        className="cursor-pointer rounded-r-lg  bg-blue-500 py-3 px-8 text-2xl font-bold text-white hover:brightness-125"
         type="button"
       >
         Add
