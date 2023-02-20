@@ -1,5 +1,5 @@
 import React from "react";
-import { todoList } from "../Todo.model";
+import { todoList, handleTodo } from "../Todo.model";
 import { BsFillTrashFill } from "react-icons/bs";
 
 export default function Todo({
@@ -13,12 +13,12 @@ export default function Todo({
 }) {
   const { id, text, status } = todo;
 
-  const handleCheckChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const handleCheckChange = (e: React.ChangeEvent<HTMLInputElement>): void => {
     const status = e.target.checked ? "completed" : "active";
     onUpdate({ ...todo, status });
   };
 
-  const handleDelete = () => {
+  const handleDelete = (): void => {
     onDelete(todo);
   };
 
