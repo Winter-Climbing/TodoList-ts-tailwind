@@ -1,5 +1,5 @@
 import React from "react";
-import { todoList, handleTodo } from "../Todo.model";
+import { todoList } from "../Todo.model";
 import { BsFillTrashFill } from "react-icons/bs";
 
 export default function Todo({
